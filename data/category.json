@@ -1,49 +1,49 @@
 [
     {
         "id": "1",
-        "name": "Trendy Look",
+        "name": "Kabel Data",
         "image": "demo3-ct-img1.jpg",
         "total_product": 20
     },
     {
         "id": "2",
-        "name": "Men T-Shirts",
+        "name": "Headset",
         "image": "demo3-ct-img2.jpg",
         "total_product": 20
     },
     {
         "id": "3",
-        "name": "Accessories",
+        "name": "Baterai",
         "image": "demo3-ct-img3.jpg",
         "total_product": 32
     },
     {
         "id": "4",
-        "name": "Street Style",
+        "name": "Charger",
         "image": "demo1-banner4.jpg",
         "total_product": 40
     },
     {
         "id": "5",
-        "name": "Deals",
+        "name": "Case",
         "image": "demo1-banner5.jpg",
         "total_product": 20
     },
     {
         "id": "6",
-        "name": "Women",
+        "name": "Anti Gores",
         "image": "collection-masonary1.jpg",
         "total_product": 26
     },
     {
         "id": "7",
-        "name": "Kids",
+        "name": "Holder",
         "image": "collection-masonary2.jpg",
         "total_product": 34
     },
     {
         "id": "8",
-        "name": "Men",
+        "name": "Kartu Memori",
         "image": "collection-masonary3.jpg",
         "total_product": 18
     }
