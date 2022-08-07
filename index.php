@@ -153,7 +153,7 @@
                                 foreach ($categories as $key => $value) { ?>
                                     <div class="col-6 col-sm-6 col-md-6 col-lg-6 category-grid-item cl-item">
                                         <div class="category-item position-relative overflow-hidden zoomscal-hov">
-                                            <a href="shop-left-sidebar.html" class="category-link">
+                                            <a href="products.php" class="category-link">
                                                 <div class="zoom-scal"><img class="blur-up lazyload" data-src="assets/images/collection/<?php echo $value['image']; ?>" src="assets/images/collection/<?php echo $value['image']; ?>" alt="collection" title="" /></div>
                                                 <div class="details">
                                                     <div class="inner">
