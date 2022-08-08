@@ -1,213 +1,135 @@
-<!doctype html>
-<html lang="en">
+<?php include('components/heading.php') ?>
 
-<head>
-    <!--Required Meta Tags-->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="description">
-    <!-- Title Of Site -->
-    <title>L Store - HP & Accessories</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" />
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/css/plugins.css" />
-    <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-</head>
+<!--Mobile Menu-->
+<div class="mobile-nav-wrapper" role="navigation">
+    <div class="closemobileMenu"><i class="icon an an-times-l pull-right"></i> Tutup Menu</div>
+    <ul id="MobileNav" class="mobile-nav">
+        <li class="lvl1 bottom-link"><a href="login.html">Home</a></li>
+        <li class="lvl1 bottom-link"><a href="category.php">Kategori Produk</a></li>
+    </ul>
+</div>
+<!--End Mobile Menu-->
 
-<body class="category-page category-2columns">
-    <!-- Page Loader -->
-    <div id="pre-loader"><img src="assets/images/loader.gif" alt="Loading..." /></div>
-    <!-- End Page Loader -->
-
-    <!--Page Wrapper-->
-    <div class="page-wrapper">
-        <!--Header-->
-        <div id="header" class="header">
-            <div class="header-main">
-                <header class="header-wrap container d-flex align-items-center">
-                    <div class="row g-0 align-items-center w-100">
-                        <!--Social Icons-->
-                        <div class="col-4 col-sm-4 col-md-4 col-lg-5 d-none d-lg-block">
-                            <ul class="social-icons list-inline">
-                                <li class="list-inline-item"><a href="#"><i class="an an-whatsapp" aria-hidden="true"></i><span class="tooltip-label">Whatsapp</span></a></li>
+<!--Body Container-->
+<div id="page-content">
+    <div class="container">
+        <div class="row">
+            <!--Sidebar-->
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 sidebar filterbar">
+                <div class="closeFilter d-block d-lg-none"><i class="icon icon an an-times-r"></i></div>
+                <div class="sidebar_tags">
+                    <!--Categories-->
+                    <div class="sidebar_widget categories filterBox filter-widget">
+                        <div class="widget-title">
+                            <h2 class="mb-0">Categories</h2>
+                        </div>
+                        <div class="widget-content filterDD">
+                            <ul class="clearfix sidebar_categories mb-0">
+                                <li class="lvl-1"><a href="#" class="site-nav">Shoes</a></li>
+                                <li class="lvl-1"><a href="#" class="site-nav">Accessories</a></li>
+                                <li class="lvl-1"><a href="#" class="site-nav">Collections</a></li>
+                                <li class="lvl-1"><a href="#" class="site-nav">Sale</a></li>
                             </ul>
                         </div>
-                        <!--End Social Icons-->
-                        <!--Logo / Menu Toggle-->
-                        <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-flex">
-                            <!--Mobile Toggle-->
-                            <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open me-3 d-lg-none"><i class="icon an an-times-l"></i><i class="icon an an-bars-l"></i></button>
-                            <!--End Mobile Toggle-->
-                            <!--Logo-->
-                            <div class="logo mx-lg-auto"><a href="index.html"><img class="logo-img" src="assets/images/logo.svg" alt="Optimal Multipurpose eCommerce Bootstrap 5 Html Template" title="L Store" /><span class="logo-txt d-none">L Store</span></a></div>
-                            <!--End Logo-->
-                        </div>
-                        <!--End Logo / Menu Toggle-->
-                        <!--Right Action-->
-                        <div class="col-6 col-sm-6 col-md-6 col-lg-5 icons-col text-right d-flex justify-content-end">
-                            <!--Search-->
-                            <div class="site-search iconset"><i class="icon an an-search-l"></i><span class="tooltip-label">Search</span></div>
-                            <!--End Search-->
-
-                        </div>
-                        <!--End Right Action-->
                     </div>
-                </header>
-                <!--Main Navigation Desktop-->
-                <div class="menu-outer">
-                    <nav class="container">
-                        <div class="row">
-                            <div class="col-1 col-sm-12 col-md-12 col-lg-12 align-self-center d-menu-col">
-                                <!--Desktop Menu-->
-                                <nav class="grid__item" id="AccessibleNav">
-                                    <ul id="siteNav" class="site-nav medium center hidearrow">
-                                        <li class="lvl1 parent megamenu"><a href="#;">Home <i class="an an-angle-down-l"></i></a>
-                                        </li>
-                                        <li class="lvl1 parent megamenu"><a href="#;">Kategori Produk <i class="an an-angle-down-l"></i></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <!--End Desktop Menu-->
-                            </div>
-                        </div>
-                    </nav>
+                    <!--Categories-->
                 </div>
-                <!--End Main Navigation Desktop-->
-                <!--Search Popup-->
-                <div id="search-popup" class="search-drawer">
-                    <div class="container">
-                        <span class="closeSearch an an-times-l"></span>
-                        <form class="form minisearch" id="header-search" action="#" method="get">
-                            <label class="label"><span>Search</span></label>
-                            <div class="control">
-                                <div class="searchField">
-                                    <div class="search-category">
-                                        <select id="rgsearch-category" name="rgsearch[category]" data-default="All Categories">
-                                            <option value="00" label="All Categories" selected="selected">All Categories</option>
-                                            <optgroup id="rgsearch-shop" label="Shop">
-                                                <option value="0">- All</option>
-                                                <option value="1">- Men</option>
-                                                <option value="2">- Women</option>
-                                                <option value="3">- Shoes</option>
-                                                <option value="4">- Blouses</option>
-                                                <option value="5">- Pullovers</option>
-                                                <option value="6">- Bags</option>
-                                                <option value="7">- Accessories</option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
-                                    <div class="input-box">
-                                        <button type="submit" title="Search" class="action search" disabled=""><i class="icon an an-search-l"></i></button>
-                                        <input type="text" name="q" value="" placeholder="Search by keyword or #" class="input-text">
-                                    </div>
+            </div>
+            <!--End Sidebar-->
+
+            <!--Main Content-->
+            <div class="col-12 col-sm-12 col-md-12 col-lg-9 main-col">
+                <!--Toolbar-->
+                <div class="toolbar">
+                    <div class="filters-toolbar-wrapper">
+                        <ul class="list-unstyled d-flex align-items-center">
+                            <li class="collection-view ms-sm-auto">
+                                <div class="filters-toolbar__item collection-view-as d-flex align-items-center me-3">
+                                    <a href="javascript:void(0)" class="change-view prd-grid change-view--active"><i class="icon an an-th" aria-hidden="true"></i><span class="tooltip-label">Grid View</span></a>
+                                    <a href="javascript:void(0)" class="change-view prd-list"><i class="icon an an-th-list" aria-hidden="true"></i><span class="tooltip-label">List View</span></a>
                                 </div>
-                            </div>
-                        </form>
+                            </li>
+                            <li class="filters-sort ms-auto ms-sm-0">
+                                <div class="filters-toolbar__item">
+                                    <label for="SortBy" class="hidden">Sort by:</label>
+                                    <select name="SortBy" id="SortBy" class="filters-toolbar__input filters-toolbar__input--sort">
+                                        <option value="featured" selected="selected">Featured</option>
+                                        <option value="best-selling">Best selling</option>
+                                        <option value="title-ascending">Alphabetically, A-Z</option>
+                                        <option value="title-descending">Alphabetically, Z-A</option>
+                                        <option value="price-ascending">Price, low to high</option>
+                                        <option value="price-descending">Price, high to low</option>
+                                        <option value="created-ascending">Date, old to new</option>
+                                        <option value="created-descending">Date, new to old</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <!--End Search Popup-->
-            </div>
-        </div>
-        <!--End Header-->
-        <!--Mobile Menu-->
-        <div class="mobile-nav-wrapper" role="navigation">
-            <div class="closemobileMenu"><i class="icon an an-times-l pull-right"></i> Close Menu</div>
-            <ul id="MobileNav" class="mobile-nav">
-                <li class="lvl1 parent megamenu"><a href="index.html">Home</a>
-                </li>
-                <li class="lvl1 parent megamenu"><a href="#">Kategori Produk</a>
-                </li>
-            </ul>
-        </div>
-        <!--End Mobile Menu-->
+                <!--End Toolbar-->
 
-        <!--Body Container-->
-        <div id="page-content">
-            <!--Collection Banner-->
-            <div class="collection-header">
-                <div class="collection-hero">
-                    <div class="collection-hero__image"></div>
-                    <div class="collection-hero__title-wrapper container">
-                        <h1 class="collection-hero__title">Kategori Produk</h1>
-                    </div>
-                </div>
-                <!--End Collection Banner-->
-
-                <!--Category Grid-->
-                <div class="container">
-                    <!--Category Masonary Grid-->
-                    <div class="grid-categorys grid-mr-20">
-                        <div class="grid-masonary category-page-grid style1">
-                            <div class="grid-sizer col-6 col-sm-6 col-md-6 col-lg-6"></div>
-                            <div class="row mx-0">
-                                <?php
-                                $data = "data/category.json";
-                                $data_category = file_get_contents($data);
-                                $categories = json_decode($data_category, true);
-                                ?>
-                                <?php
-                                foreach ($categories as $key => $value) { ?>
-                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 category-grid-item cl-item">
-                                        <div class="category-item position-relative overflow-hidden zoomscal-hov">
-                                            <a href="products.php" class="category-link">
-                                                <div class="zoom-scal"><img class="blur-up lazyload" data-src="assets/images/collection/<?php echo $value['image']; ?>" src="assets/images/collection/<?php echo $value['image']; ?>" alt="collection" title="" /></div>
-                                                <div class="details">
-                                                    <div class="inner">
-                                                        <h3 class="category-title"><?php echo $value['name']; ?></h3>
-                                                        <span class="counts mt-0 mt-md-1"><?php echo $value['total_product']; ?> Products</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
+                <!--Product Grid-->
+                <div class="grid-products grid--view-items prd-grid">
+                    <?php
+                    $data = "data/products.json";
+                    $data_products = file_get_contents($data);
+                    $products = json_decode($data_products, true);
+                    ?>
+                    <div class="row">
+                        <?php
+                        foreach ($products as $key => $value) { ?>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!--Start Product Image-->
+                                <div class="product-image">
+                                    <!--Start Product Image-->
+                                    <a href="product-layout1.html" class="product-img">
+                                        <!-- image -->
+                                        <img data-src="assets/images/products/product-1.jpg" src="assets/images/products/product-1.jpg" alt="image" title="">
+                                        <!-- End image -->
+                                    </a>
+                                    <!--End Product Image-->
+                                </div>
+                                <!--End Product Image-->
+                                <!--Start Product Details-->
+                                <div class="product-details text-center">
+                                    <!--Product Name-->
+                                    <div class="product-name text-uppercase">
+                                        <a href="product-layout1.html"><?php echo $value['name'] ?></a>
                                     </div>
-                                <?php } ?>
+                                    <!--End Product Name-->
+                                    <!--Product Price-->
+                                    <div class="product-price">
+                                        <span class="old-price">Rp. <?php echo number_format($value['normal_price'], 0, ',', '.'); ?></span>
+                                        <span class="price">Rp. <?php echo number_format($value['selling_price'], 0, ',', '.'); ?></span>
+                                    </div>
+                                    <!--End Product Price-->
+                                </div>
+                                <!--End Product Details-->
                             </div>
-                        </div>
+                        <?php } ?>
                     </div>
-                    <!--End Category Masonary Grid-->
                 </div>
-                <!--End Category Grid-->
+                <!--End Product Grid-->
+
+                <!--Pagination Classic-->
+                <hr class="clear">
+                <div class="pagination">
+                    <ul>
+                        <li class="prev"><a href="#"><i class="icon align-middle an an-caret-left" aria-hidden="true"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">5</a></li>
+                        <li class="next"><a href="#"><i class="icon align-middle an an-caret-right" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <!--End Pagination Classic-->
             </div>
-            <!--End Body Container-->
-
-            <!--Footer-->
-            <div class="footer footer-1">
-                <div class="footer-top clearfix">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                                <p>Jalan Solok - Muaro Labuah, Muaro Danau Di Atas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom clearfix">
-                    <div class="container">
-                        <div class="d-flex-center flex-column justify-content-md-between flex-md-row-reverse">
-                            <div class="copytext text">&copy; 2022 Optimal. All Rights Reserved.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Footer-->
-
-            <!--Scoll Top-->
-            <span id="site-scroll"><i class="icon an an-chevron-up"></i></span>
-            <!--End Scoll Top-->
-
-            <!-- Including Jquery -->
-            <script src="assets/js/vendor/jquery-min.js"></script>
-            <script src="assets/js/vendor/js.cookie.js"></script>
-            <!--Including Javascript-->
-            <script src="assets/js/plugins.js"></script>
-            <script src="assets/js/main.js"></script>
-
+            <!--End Main Content-->
         </div>
-        <!--End Page Wrapper-->
-</body>
+    </div>
+</div>
+<!--End Body Container-->
 
-</html>
+<?php include('components/footing.php') ?>
