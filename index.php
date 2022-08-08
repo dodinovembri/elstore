@@ -38,6 +38,11 @@
             <!--End Sidebar-->
 
             <!--Main Content-->
+            <?php
+            $data = "data/products.json";
+            $data_products = file_get_contents($data);
+            $products = json_decode($data_products, true);
+            ?>
             <div class="col-12 col-sm-12 col-md-12 col-lg-9 main-col">
                 <!--Toolbar-->
                 <div class="toolbar">
@@ -71,11 +76,6 @@
 
                 <!--Product Grid-->
                 <div class="grid-products grid--view-items prd-grid">
-                    <?php
-                    $data = "data/products.json";
-                    $data_products = file_get_contents($data);
-                    $products = json_decode($data_products, true);
-                    ?>
                     <div class="row">
                         <?php
                         foreach ($products as $key => $value) { ?>
@@ -83,9 +83,9 @@
                                 <!--Start Product Image-->
                                 <div class="product-image">
                                     <!--Start Product Image-->
-                                    <a href="product-layout1.html" class="product-img">
+                                    <a href="void::" class="product-img">
                                         <!-- image -->
-                                        <img data-src="assets/images/products/product-1.jpg" src="assets/images/products/product-1.jpg" alt="image" title="">
+                                        <img src="assets/images/products/product-1.jpg" alt="image" title="">
                                         <!-- End image -->
                                     </a>
                                     <!--End Product Image-->
@@ -95,7 +95,7 @@
                                 <div class="product-details text-center">
                                     <!--Product Name-->
                                     <div class="product-name text-uppercase">
-                                        <a href="product-layout1.html"><?php echo $value['name'] ?></a>
+                                        <a href="void::"><?php echo $value['name'] ?></a>
                                     </div>
                                     <!--End Product Name-->
                                     <!--Product Price-->
